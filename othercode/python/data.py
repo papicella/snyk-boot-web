@@ -16,6 +16,17 @@ ADAFRUIT_IO_KEY = 'b780002b85d6411ca0ad9f9c60195f72'
 
 ADAFRUIT_IO_KEY_2 = 'b780002b85d6411cb0ad9c9c60195f79'
 
+
+SAMPLE_JWT = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c'
+
+
+SAMPLE_JWT_SPLIT = """eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.
+eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.
+SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"""
+
+
+
+
 # Set to your Adafruit IO username.
 # (go to https://accounts.adafruit.com to find your username)
 ADAFRUIT_IO_USERNAME = 'YOUR_AIO_USERNAME'
