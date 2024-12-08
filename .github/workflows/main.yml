@@ -1,0 +1,36 @@
+name: "Snyk Code and Snyk Open Source Test"
+
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  Pipeline-Job:
+    # Configure Environment
+    name: 'Snyk Test'
+    runs-on: ubuntu-latest
+    env: 
+      SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+       
+    steps:
+    # Checkout Code
+    - name: Checkout Code
+      uses: actions/checkout@v1
+
+    # Install and Authenticate to Snyk
+    - name: Install Snyk & Authenticate
+      run: |
+         sudo npm install -g snyk
+         echo ${SNYK_TOKEN}
+         snyk auth ${SNYK_TOKEN}
+    # Run Snyk Code
+    - name: Snyk Code test
+      run: |
+         snyk code test
+      continue-on-error: true
+    # Run Snyk Open Source
+    - name: Snyk Open Source test
+      run: |
+         snyk test
+      continue-on-error: true
