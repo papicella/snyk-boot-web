@@ -65,6 +65,15 @@ public class CustomerService {
         return customers;
     }
 
+    public List<Customer> getAllByFirstName (String firstName) {
+        List<Customer> customers = jdbcTemplate.query(
+                "SELECT id, first_name, last_name FROM customers WHERE first_name = '" + firstName + "'",
+                (rs, rowNum) -> new Customer((int) rs.getLong("id"),
+                        rs.getString("first_name"),
+                        rs.getString("last_name")));
+
+        return customers;
+    }
     /*
 
     ORIGINAL SQLi issue
