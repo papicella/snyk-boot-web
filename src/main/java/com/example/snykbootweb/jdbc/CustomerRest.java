@@ -30,6 +30,11 @@ public class CustomerRest {
         return customerService.getAllByLastName(lastName);
     }
 
+    @GetMapping(produces = "application/json", path = "/all/{firstName}")
+    public List<Customer> getAllCustomersByFirstName(@PathVariable String firstName) {
+        return customerService.getAllByFirstName(firstName);
+    }
+
     /*
     @GetMapping(produces = "application/json", path = "/all/withfix/{lastName}")
     public List<Customer> getAllCustomersByLastNameFixed(@PathVariable String lastName) {
