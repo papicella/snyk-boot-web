@@ -20,4 +20,4 @@ spec:
   type: website
   lifecycle: production
   owner: papicella
-  system: public-websites
+  system: public-websites 
