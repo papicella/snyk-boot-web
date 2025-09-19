@@ -31,7 +31,13 @@ public class CustomerRest {
 
     @GetMapping(produces = "application/json", path = "/all/{firstName}")
     public List<Customer> getAllCustomersByFirstName(@PathVariable String firstName) {
-        return customerService.getAllByFirstName(firstName);
+        List<Customer> customers = customerService.jdbcTemplate.query(
+                "SELECT id, first_name, last_name FROM customers WHERE first_name = '" + firstName + "'",
+                (rs, rowNum) -> new Customer((int) rs.getLong("id"),
+                        rs.getString("first_name"),
+                        rs.getString("last_name")));
+
+        return customers;
     }
 
     /*
