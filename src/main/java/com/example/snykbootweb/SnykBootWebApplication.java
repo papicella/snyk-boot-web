@@ -7,6 +7,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class SnykBootWebApplication {
 
     public static void main(String[] args) {
+
+        System.out.println("Hello world");
         SpringApplication.run(SnykBootWebApplication.class, args);
     }
 
