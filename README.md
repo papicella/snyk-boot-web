@@ -4,13 +4,13 @@
 
 ## Steps to create the container image
 
-- Ensure you have JDK 11 installed as follows
+- Ensure you have JDK 17 installed as follows
 
 ```shell
 $ java -version
-java version "11.0.13" 2021-10-19 LTS
-Java(TM) SE Runtime Environment 18.9 (build 11.0.13+10-LTS-370)
-Java HotSpot(TM) 64-Bit Server VM 18.9 (build 11.0.13+10-LTS-370, mixed mode)
+openjdk version "17.0.13" 2024-10-15
+OpenJDK Runtime Environment (build 17.0.13+11)
+OpenJDK 64-Bit Server VM (build 17.0.13+11, mixed mode, sharing)
 ```
 
 - Build the artifact image as follows
